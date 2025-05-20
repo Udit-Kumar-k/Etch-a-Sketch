@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
-    <link rel="'stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main">
@@ -17,28 +17,24 @@
     <div class="workGround">
 
     <div class="leftSide">
-        <button class="blackPen"></button>
-        <button class="lightPen"></button>
-        <button class="randomPen"></button>
+        <button class="blackPen leftbtn">Black Pen</button>
+        <button class="lightPen leftbtn">Light Pen</button>
+        <button class="randomPen leftbtn">Random Pen</button>
     </div>
 
-    <div class="Boardcontainer">
-
+    <div class="boardContainer">
     </div>
 
     <div class="rightSide">
-    <div class="rightSideSize">
-    <div class="rightSideSizeText">Change Size</div>
-    <div class="inputbox"> </div>
-    <button class="confirmSize"> </button>
+    <button class="changeSize rightbtn">Change Size</button>
+    <button class="export rightbtn">Export</button>
+    <button class="reset rightbtn">Reset</button>
     </div>
-    <div class='rightSideButtons'>
-    <button class="export"></button>
-    <button class="reset"></button>
     </div>
 
     </div>
-
+    <div class="dimensions">
+        __ x __
     </div>
     </div>
 </body>

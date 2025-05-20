@@ -1,0 +1,114 @@
+body{
+    background-color: #EDF2F4;
+}
+*{
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.9rem;
+    font-family: arial;
+    font-weight: 900;
+    margin-bottom: 0.5%;
+}
+
+.workGround{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSide, .rightSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+}
+.leftbtn, .rightbtn{
+    height: 198px;
+    width: 70px;
+    margin: 2%;
+    border-radius: 2px;
+    border-style:solid;
+    border-width: 1px;
+    font-weight: bold;
+}
+.leftbtn, .rightbtn{
+    transition: all 0.2s ease;
+}
+
+.leftbtn:hover, .rightbtn:hover{
+    transform: scale(1.05);
+}
+
+.leftbtn:active, .rightbtn:active{
+    transform: scale(0.95);
+}
+.blackPen{
+    background-color: #2B2D42;
+    color: white;
+}
+.lightPen{
+    background-color: #8D99AE;
+    color: black;
+}
+.randomPen{
+    background: linear-gradient(to bottom, #EF233C, #D90429);
+    color: black;
+}
+
+.export, .reset, .changeSize{
+    background-color: rgb(227, 227, 227); 
+    color: black;
+}
+
+.boardContainer{
+    height: 600px;
+    width: 600px;
+    /*border: 1px solid black;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rightSideSizeText{
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.info{
+    font-family: arial;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10%;
+    font-weight: lighter;
+}
+.inputbox{
+    height: 20px;
+    width: 55px;
+    margin-bottom: 10%;
+}
+.rightSideButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dimensions{
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+}
