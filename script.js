@@ -26,6 +26,7 @@ function createGrid(size) {
   return size;
 }
 
+//event Delegation
 container.addEventListener('mouseover',(event)=>{
   colorOver(event, currentPen);
 })
@@ -49,7 +50,7 @@ lbtn3.addEventListener('click',function(){
 
 const rbtn1 = document.querySelector('.changeSize');
 rbtn1.addEventListener("click",function(){
-  
+  newSizeGrid();
 })
 
 const rbtn2 = document.querySelector('.export');
@@ -72,18 +73,14 @@ function colorOver(event, currentPen) {
                 break;
           case 'l':
     let shadeLevel = parseInt(square.dataset.shadeLevel);
-    const maxShadeLevel = 10; // Number of steps from white to black
-
+    const maxShadeLevel = 10;
     if (shadeLevel < maxShadeLevel) {
-        shadeLevel++; // Increment shade level
-        square.dataset.shadeLevel = shadeLevel; // Update stored level
-
-        const alpha = shadeLevel / maxShadeLevel; // Calculate opacity (0.0 to 1.0)
-
-        // Set the background color to black with the calculated opacity
+        shadeLevel++; 
+        square.dataset.shadeLevel = shadeLevel; 
+        const alpha = shadeLevel / maxShadeLevel; 
         square.style.backgroundColor = `rgba(0, 0, 0, ${alpha})`;
     }
-    // No 'else if' needed here for === maxShadeLevel, as alpha will be 1, which is black.
+   
     break;
             case 'r': 
                 const r = Math.floor(Math.random() * 256);
@@ -92,10 +89,23 @@ function colorOver(event, currentPen) {
                 square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
                 break;
             default:
-                // Handle the default case (optional, but good practice)
-                // You could set it to a default color or do nothing
                 break;
         }
     }
+}
+
+const getSize = function(){
+  let input = prompt("Enter a new size for side of a square (limit is 100)")
+  return input;
+}
+
+const newSizeGrid = function(){
+  let newSize = getSize();
+  if (newSize<101){
+    createGrid(newSize);
+  }
+  else{
+    alert("Enter a valid number, the limit is 100")
+  }
 }
 
