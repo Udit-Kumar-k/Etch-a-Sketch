@@ -31,7 +31,7 @@ container.addEventListener('mouseover',(event)=>{
   colorOver(event, currentPen);
 })
 
-currentSize = createGrid(25);
+currentSize = createGrid(16);
 
 const lbtn1 = document.querySelector(".blackPen");
 lbtn1.addEventListener('click', function(){
@@ -96,13 +96,19 @@ function colorOver(event, currentPen) {
 
 const getSize = function(){
   let input = prompt("Enter a new size for side of a square (limit is 100)")
-  return input;
+  if (input==null){
+  return;
+  }
+  else{
+    return input;
+  }
 }
 
 const newSizeGrid = function(){
   let newSize = getSize();
   if (newSize<101){
     createGrid(newSize);
+    currentSize =newSize;
   }
   else{
     alert("Enter a valid number, the limit is 100")
